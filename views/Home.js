@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView, StyleSheet, View, StatusBar, Button, Text } from 'react-native';
 import Login from "./Login";
+import Posts from './Posts';
 import { auth } from '../firebase';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 
@@ -33,7 +34,7 @@ const Home = ({navigation})=> {
         <Button style={style.button} color="white" title='Sign Out' onPress={()=>signOutUser()}/>
         </View>
         <ScrollView style={style.container}>
-          <Text>Hello</Text>
+          <Posts/>
         </ScrollView>
       </View>
       : 
