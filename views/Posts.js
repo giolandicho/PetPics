@@ -14,16 +14,19 @@ const Posts = () => {
            currentPosts.push(doc.data());
        })
        setPosts(currentPosts);
+       console.log(posts)
    }
+   
+
    useEffect(() => {
        getPosts();
-   }, [])
+   },[])
 
     return(
         <View>
-            {posts && posts.map((post) => {
+            {posts && posts.map((post, i) => {
                 return(
-                    <Post image={post.image} caption={post.caption} user={post.user}/>
+                    <Post key={i} image={post.image} caption={post.caption} user={post.user}/>
                 )
             })}
         </View>

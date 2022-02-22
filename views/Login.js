@@ -8,7 +8,6 @@ const Login = () => {
     const [password, setPassword] = useState('')
 
     const registerUser = async() => {
-        console.log("1st")
        
             createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {

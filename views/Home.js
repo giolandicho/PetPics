@@ -27,7 +27,7 @@ const Home = ({navigation})=> {
     <View style={style.appContainer}>
       <StatusBar barStyle='light-content'/>
       <View style={style.header}/>
-      {user !== null ? 
+      {user ? 
       <View style={style.viewContainer}>
         <View style={style.buttonContainer}>
         <Button style={style.button} color="white" title='Add Post' onPress={()=> navigation.navigate('AddPost')}/>
